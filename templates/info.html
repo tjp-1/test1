@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<form action="/student/info/" method="post">
+    {% csrf_token %}
+    <p>
+        <label for="sn">姓名:</label><input name="sname"/>
+    </p>
+    <p>
+        <label for="sn">所属班级:</label>
+        <select name="clsname" id="sc">
+            <option value="B201Python">B201Python</option>
+            <option value="B202Java">B202Java</option>
+            <option value="B203HTML5">B203HTML5</option>
+        </select>
+    </p>
+    <p>
+        <label for="cour">选课:</label>
+        <input name="coursname" type="checkbox" value="Python"/>Python&emsp;
+        <input name="coursname" type="checkbox" value="Java"/>Java&emsp;
+        <input name="coursname" type="checkbox" value="HTML5"/>HTML5&emsp;
+    </p>
+    <p>
+        <input type="submit" value="注册"/>
+    </p>
+</form>
+</body>
+</html>

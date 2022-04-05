@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" width="500px">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>密码</th>
+    </tr>
+    {% for stu in students %}
+    <tr>
+        <th>{{ forloop.counter }}</th>
+        <th>{{ stu.sname }}</th>
+        <th>{{ stu.spwd }}</th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

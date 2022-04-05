@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="0" width="500px">
+    <tr>
+        <th>编号</th>
+        <th>班级名称</th>
+        <th>操作</th>
+    </tr>
+    {% for c in cls %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ c.cname }}</td>
+        <td>
+            <a href="/student/getstu/?cno={{c.cno}}">详情</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
